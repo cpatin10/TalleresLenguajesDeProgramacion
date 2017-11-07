@@ -1,0 +1,24 @@
+# Autor: Catalina Patiño Forero
+# Programa que lee un valor n y luego n valores enteros, y retorna su promedio.
+#
+Inicio:    readInt(n)
+           i := 0
+	   sum := 0
+	   uno := 1
+Ciclo:     if i >= n then goto FinCiclo
+           readInt(a)
+	   sum := sum + a
+	   i := i + uno
+	   goto Ciclo
+FinCiclo:  prom := sum/n
+           writeInt(prom)
+	   goto Terminar
+Terminar:  halt
+	   
+#
+equ n    M[0]
+equ i    M[1]
+equ sum  M[2]
+equ a    M[3]
+equ uno  M[4]
+equ prom M[5]

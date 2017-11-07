@@ -1,0 +1,46 @@
+# Autor: Catalina Patiño Forero
+# Lee una cadena y si es palindromo retorna uno de lo contrario retorna 0
+#
+Inicio:      cero := 0
+             uno := 1
+	     i := cero
+	     j := cero
+	     cont := 1
+	     len := 100
+	     readStr(s, len)
+	     base := 15
+Cicl1:       dirj := base + j
+             sj := M[dirj + 0]
+	     if sj = cero then goto FinCicl1
+	     j := j + uno
+	     goto Cicl1
+FinCicl1:    mitad := j
+             j := j - uno
+Cicl2:       diri := base + i
+             dirj := base + j
+	     si := M[diri + 0]
+	     sj := M[dirj + 0]
+	     if i > mitad then goto FinCicl2
+	     if cont <> uno then goto FinCicl2
+Cond:        if si = sj then goto FinCond
+             cont := cero
+FinCond:     i := i + uno
+             j := j - uno
+	     goto Cicl2
+FinCicl2:   writeInt(cont)
+Terminar:    halt
+#
+equ cero  M[0]
+equ uno   M[1]
+equ i     M[2]
+equ j     M[3]
+equ cont  M[4]
+equ len   M[5]
+equ base  M[6]
+equ dirj  M[7]
+equ diri  M[8]
+equ sj    M[9]
+equ si    M[10]
+equ mitad M[11]
+equ s     M[15]
+	     

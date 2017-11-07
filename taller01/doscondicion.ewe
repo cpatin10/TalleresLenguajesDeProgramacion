@@ -1,0 +1,27 @@
+# Autor: Catalina Patiño Forero
+# Verifica si dos numeros dados (a, b) cumplen:
+# a >= 10 v b <= 20
+#
+Inicio:           readInt(a)
+                  readInt(b)
+		  uno := 1
+		  cero := 0
+		  diez := 10
+		  veinte := 20
+C1:               if a < diez then goto C2
+                  writeInt(uno)
+		  goto FinC1
+C2:               if b > veinte then goto siC2
+                  writeInt(uno)
+		  goto FinC2
+siC2:             writeInt(cero)
+                  goto FinC2
+FinC2:            goto FinC1
+FinC1:            goto Terminar
+Terminar:         halt
+equ cero M[0]
+equ uno  M[1]
+equ a    M[2]
+equ b    M[3]
+equ diez M[4]
+equ veinte M[5]

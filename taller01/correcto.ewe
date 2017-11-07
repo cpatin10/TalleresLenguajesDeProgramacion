@@ -1,0 +1,21 @@
+# Autor: Catalina Patiño Forero
+# Version corregida del algoritmo dado en el punto 10 del taller 1
+# Se agregan mas labels para mantener la condicion estructurada
+#
+Inicio:     readInt(a)
+            readInt(b)
+	    cero := 0
+C1:         if a > cero then goto C2
+            writeInt(b)
+	    goto finC1
+C2:         if b > cero then goto condtrue
+            writeInt(b)
+	    goto finC2
+condtrue:   writeInt(a)
+finC2:      goto finC1
+finC1:      goto final
+final:      halt
+#
+equ cero M[0]
+equ a    M[1]
+equ b    M[2]

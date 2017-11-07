@@ -1,0 +1,38 @@
+# Autor: Catalina Patiño Forero
+# Programa que lee un string y crea un palindromo a partir de este.
+#
+Inicio:       cero := 0
+              uno := 1
+	      i := 0
+	      len := 200
+	      base := 15
+	      readStr(s, len)
+Cicl1:        dir := base + i
+              si := M[dir + 0]
+	      if si = cero then goto FinCicl1
+	      i := i + uno
+	      goto Cicl1
+FinCicl1:     j := i - uno
+Cicl2:        dirj := base + j
+              dir := base + i
+	      sj := M[dirj + 0]
+	      if j < cero then goto FinCicl2
+	      M[dir + 0] := sj
+	      i := i + uno
+	      j := j - uno
+	      goto Cicl2
+FinCicl2:     writeStr(s)
+Terminar:     halt
+#
+equ cero  M[0]
+equ uno   M[1]
+equ i     M[2]
+equ j     M[3]
+equ len   M[4]
+equ base  M[5]
+equ dir   M[6]
+equ dirj  M[7]
+equ si    M[8]
+equ sj    M[9]
+equ s     M[15]
+	      

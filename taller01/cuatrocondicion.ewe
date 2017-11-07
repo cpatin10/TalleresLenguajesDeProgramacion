@@ -1,0 +1,33 @@
+# Autor: Catalina Patiño Forero
+# Programa que lee cuatro numeros enteros (a, b, c, d)
+# y retorna 1 si se cumple o 0 si no se cumple la siguiente condicion:
+# a < (b - c) && b < (c - d)
+#
+Inicio:       readInt(a)
+              readInt(b)
+	      readInt(c)
+	      readInt(d)
+	      cero := 0
+	      uno := 1
+	      bc := b - c
+	      cd := c - d
+C1:           if a < bc then goto C2
+              writeInt(cero)
+	      goto FinC1
+C2:           if b < cd then goto siC2
+              writeInt(cero)
+	      goto FinC2
+siC2:         writeInt(uno)
+              goto FinC2
+FinC2:        goto FinC1
+FinC1:        goto Terminar
+Terminar:     halt
+#
+equ cero M[0]
+equ uno  M[1]
+equ a    M[2]
+equ b    M[3]
+equ c    M[4]
+equ d    M[5]
+equ bc   M[6]
+equ cd   M[7]

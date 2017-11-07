@@ -1,0 +1,31 @@
+# Autor: Catalina Patiño Forero
+# Lee una string y retorna el numero de espacios en blanco que esta contiene.
+#
+Inicio:        count := 0
+               uno := 1
+	       cero := 0
+	       len := 100
+	       i := 0
+	       readStr(s, len)
+	       base := 15
+	       litEsp := 32
+Ciclo:         dir := base + i
+               si := M[dir + 0]
+	       if si = cero then goto FinCiclo
+Cond1:         if si <> litEsp then goto FinCond1
+               count := count + uno
+FinCond1:      i := i + uno
+               goto Ciclo
+FinCiclo:      writeInt(count)
+Terminar:      halt
+#
+equ count    M[0]
+equ uno      M[1]
+equ cero     M[2]
+equ len      M[3]
+equ i        M[4]
+equ litEsp  M[5]
+equ base   M[6]
+equ dir  M[7]
+equ si      M[8]
+equ s        M[15]

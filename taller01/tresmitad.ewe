@@ -1,0 +1,31 @@
+# Autor: Catalina Patiño Forero
+# Encuentra entre tres numeros el de la mitad
+#
+Inicio:         readInt(a)
+                readInt(b)
+		readInt(c)
+C1:             if a <= b then goto C4
+C2:             if b <= c then goto C3
+                writeInt(b)
+		goto FinC2
+C3:             if a <= c then goto siC3
+                writeInt(c)
+		goto FinC2
+siC3:           writeInt(a)
+                goto FinC2
+FinC2:          goto FinC1
+C4:             if a <= c then goto C5
+                writeInt(a)
+		goto FinC4
+C5:             if b <= c then goto siC5
+                writeInt(c)
+		goto FinC5
+siC5:           writeInt(b)
+                goto FinC5
+FinC5:          goto FinC4
+FinC4:          goto FinC1
+FinC1:          goto Terminar
+Terminar:       halt
+equ a M[0]
+equ c M[1]
+equ b M[2]

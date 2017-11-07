@@ -1,0 +1,29 @@
+# Autor: Catalina Patiño Forero
+# Lee dos cadenas: la primera de un solo caracter y la segunda de cualquier tamaño, y muestra donde estan los indices que contiene dicha letra.
+#
+Inicio:     cero := 0
+            uno := 1
+	    i := 0
+	    readStr(ch, ch)
+	    len := 100
+	    readStr(s, len)
+	    base := 15
+Ciclo:      dir := base + i
+            si := M[dir + 0]
+	    if si = cero then goto FinCiclo
+Cond:       if si <> ch then goto FinCond
+            writeInt(i)
+FinCond:    i := i + uno
+            goto Ciclo
+FinCiclo:   goto Terminar
+Terminar:   halt
+#
+equ cero   M[0]
+equ uno    M[1]
+equ i      M[2]
+equ si     M[3]
+equ len    M[4]
+equ base   M[5]
+equ dir    M[6]
+equ ch     M[7]
+equ s      M[15]

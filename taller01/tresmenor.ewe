@@ -1,0 +1,25 @@
+# Autor: Catalina Patiño Forero
+# Problema 1:
+# Encuentra el menor de tres numeros.
+#
+inicio:     readInt(a)
+            readInt(b)
+	    readInt(c)
+C1:         if b <= a then goto siC1
+C2:         if c <= a then goto siC2
+	    writeInt(a)
+	    goto FinC2
+siC2:       writeInt(c)
+            goto FinC2
+FinC2:      goto FinC1
+siC1:       if c <= b then goto siC3
+            writeInt(b)
+	    goto FinC3
+siC3:       writeInt(c)
+            goto FinC3
+FinC3:      goto FinC1
+FinC1:      goto Terminar
+Terminar:   halt
+equ a M[0]
+equ b M[1]
+equ c M[2]

@@ -1,0 +1,25 @@
+# Autor: Catalina Patiño Forero
+# Programa que lee un numero indeterminado de valores enteros y cuando lea el primer valor negativo retorna el promedio de los valores anteriores.
+#
+Inicio:    i := 0
+	   sum := 0
+	   uno := 1
+	   cero := 0
+	   prom := 0
+Ciclo:     readInt(a)
+           if a < cero then goto FinCiclo
+           sum := sum + a
+	   i := i + uno
+	   goto Ciclo
+FinCiclo:  if i = cero then goto siCond
+           prom := sum/i
+siCond:    writeInt(prom)
+	   goto Terminar
+Terminar:  halt
+#
+equ cero M[0]
+equ i    M[1]
+equ sum  M[2]
+equ a    M[3]
+equ uno  M[4]
+equ prom M[5]
